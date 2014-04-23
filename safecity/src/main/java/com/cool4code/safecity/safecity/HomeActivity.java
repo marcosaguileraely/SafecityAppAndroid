@@ -26,7 +26,7 @@ public class HomeActivity extends FragmentActivity implements OnClickListener {
         ParseObject.registerSubclass(socialPost.class);
         Parse.initialize(this, "XdWuoWJKZ4rL1hv2lGfgB9IP4fy5po65xayBwwNW", "Ky1GlA3n4jiEnTTLreBjDzo94J5tLshdnZ9sDR1e");
         setContentView(R.layout.activity_home);
-        View insertButton= findViewById(R.id.insertar);
+        View insertButton= findViewById(R.id.reportButton);
         insertButton.setOnClickListener(this);
         setUpMapIfNeeded();
     }

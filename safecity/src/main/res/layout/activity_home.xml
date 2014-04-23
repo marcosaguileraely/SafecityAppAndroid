@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="insertar"
-        android:id="@id/insertar"
-        android:layout_gravity="center_vertical" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <EditText
-        android:layout_width="92dp"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@id/comment"
-        android:layout_gravity="center_vertical" />
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@id/comment"
+            android:layout_gravity="center_vertical"
+            android:focusable="false" />
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/map"
-        tools:context="com.cool4code.safecity.safecity.HomeActivity"
-        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/map"
+            tools:context="com.cool4code.safecity.safecity.HomeActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_gravity="left|center_vertical" />
 
-</LinearLayout>
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@id/reportButton"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#ffffffff"
+        android:background="@android:drawable/ic_menu_myplaces"
+        android:singleLine="false"
+        android:layout_alignParentStart="false" />
 
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@id/home_messages_wall"
+        android:layout_below="@id/reportButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:drawable/ic_menu_view"
+        android:clickable="true" />
 
-
-
-
-
+</RelativeLayout>

@@ -2,4 +2,6 @@
 <resources>
     <item name="insertar" type="id">insertar</item>
     <item name="comment" type="id">comment</item>
+    <item name="reportButton" type="id">reportButton</item>
+    <item name="home_messages_wall" type="id">home_messages_wall</item>
 </resources>
