@@ -4,12 +4,10 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-
 import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
-import com.google.android.gms.common.Scopes;
 import com.google.android.gms.plus.PlusClient;
 
 
@@ -74,9 +72,9 @@ public abstract class PlusBaseActivity extends ActionBarActivity
 
         // Initialize the PlusClient connection.
         // Scopes indicate the information about the user your application will be able to access.
-        mPlusClient =
+        /*mPlusClient =
                 new PlusClient.Builder(this, this, this).setScopes(Scopes.PLUS_LOGIN,
-                        Scopes.PLUS_PROFILE).build();
+                        Scopes.PLUS_PROFILE).build();*/
     }
 
     /**

@@ -3,5 +3,6 @@
 
     <string name="app_name">Safecity</string>
     <string name="title_activity_home">Map</string>
+    <string name="insertarRegistros">insertarRegistros</string>
 
 </resources>
