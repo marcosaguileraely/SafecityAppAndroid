@@ -1,21 +1,33 @@
 package com.cool4code.safecity.safecity;
 
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.EditText;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.parse.Parse;
+import com.parse.ParseObject;
 
-public class HomeActivity extends FragmentActivity {
+
+public class HomeActivity extends FragmentActivity implements OnClickListener {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Your Application ID and Client Key are defined elsewhere
+        ParseObject.registerSubclass(socialPost.class);
+        Parse.initialize(this, "XdWuoWJKZ4rL1hv2lGfgB9IP4fy5po65xayBwwNW", "Ky1GlA3n4jiEnTTLreBjDzo94J5tLshdnZ9sDR1e");
         setContentView(R.layout.activity_home);
+        View insertButton= findViewById(R.id.insertar);
+        insertButton.setOnClickListener(this);
         setUpMapIfNeeded();
     }
 
@@ -61,5 +73,15 @@ public class HomeActivity extends FragmentActivity {
      */
     private void setUpMap() {
         mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+    }
+
+    @Override
+    public void onClick(View v) {
+        Log.d("MyApp", "I am here");
+        EditText commentBox = (EditText) findViewById(R.id.comment);
+        socialPost sp= new socialPost();
+        sp.setDescription(commentBox.getText().toString());
+        sp.saveEventually();
+        Log.d("MyApp", "Ends here!");
     }
 }
