@@ -1,5 +1,9 @@
 package com.cool4code.safecity.safecity;
 
+import android.content.Context;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -7,6 +11,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -16,7 +22,6 @@ import com.parse.ParseObject;
 
 
 public class HomeActivity extends FragmentActivity implements OnClickListener {
-
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
     @Override
@@ -29,6 +34,19 @@ public class HomeActivity extends FragmentActivity implements OnClickListener {
         View insertButton= findViewById(R.id.reportButton);
         insertButton.setOnClickListener(this);
         setUpMapIfNeeded();
+        GoogleMap map = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
+        map.setMyLocationEnabled(true);
+
+        Criteria criteria = new Criteria();
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        String provider = locationManager.getBestProvider(criteria, false);
+        Location location = locationManager.getLastKnownLocation(provider);
+        double lat =  location.getLatitude();
+        double lng = location.getLongitude();
+        LatLng coordinate = new LatLng(lat, lng);
+        Log.d("Coordenadas","latlong");
+        CameraUpdate yourLocation = CameraUpdateFactory.newLatLngZoom(coordinate, 15);
+        map.animateCamera(yourLocation);
     }
 
     @Override
