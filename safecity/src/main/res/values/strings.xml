@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Safecity</string>
-    <string name="title_activity_home">Map</string>
+    <string name="app_name">SafeCity</string>
+    <string name="title_activity_home">SafeCity</string>
     <string name="insertarRegistros">insertarRegistros</string>
+    <string name="title_activity_sign_up">Registro de Usuario</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_intro">introActivity</string>
 
 </resources>

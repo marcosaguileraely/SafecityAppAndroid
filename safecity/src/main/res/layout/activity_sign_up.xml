@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="${packageName}.${activityClass}"
+    android:padding="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Usuario"
+        android:id="@id/etiqueta_usuario"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/username" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_toRightOf="@id/etiqueta_usuario" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Clave"
+        android:id="@id/etiqueta_clave"
+        android:layout_above="@id/seguridad_correo"
+        android:layout_toLeftOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_below="@+id/username"
+        android:layout_toRightOf="@id/etiqueta_usuario" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="E-mail"
+        android:id="@id/etiqueta_email"
+        android:layout_alignBottom="@id/seguridad_correo"
+        android:layout_toLeftOf="@+id/password" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@id/seguridad_correo"
+        android:layout_below="@+id/password"
+        android:layout_toRightOf="@id/etiqueta_clave" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Móvil"
+        android:id="@id/etiqueta_movil"
+        android:layout_above="@id/seguridad_edad"
+        android:layout_alignLeft="@id/etiqueta_edad"
+        android:layout_alignStart="@id/etiqueta_edad" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@id/seguridad_nomovil"
+        android:layout_below="@id/seguridad_correo"
+        android:layout_toRightOf="@id/etiqueta_email" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Edad"
+        android:id="@id/etiqueta_edad"
+        android:layout_alignBottom="@id/seguridad_edad"
+        android:layout_toLeftOf="@id/seguridad_edad" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@id/seguridad_edad"
+        android:layout_below="@id/seguridad_nomovil"
+        android:layout_alignLeft="@id/seguridad_nomovil"
+        android:layout_alignStart="@id/seguridad_nomovil" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Acceder"
+        android:background="#ff3983ff"
+        android:textColor="#ffffffff"
+        android:layout_above="@id/seguridad_no_tienes_cuenta_boton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar Cuenta"
+        android:id="@id/signupToParse"
+        android:background="#ff0fddaf"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/login"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="3dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Ya tienes una cuenta?"
+        android:id="@id/seguridad_ya_tienes_cuenta_button"
+        android:background="#ff3983ff"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="¿No tienes cuenta aun?"
+        android:id="@id/seguridad_no_tienes_cuenta_boton"
+        android:background="#ff0fddaf"
+        android:textColor="#fff"
+        android:layout_above="@id/seguridad_ya_tienes_cuenta_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp" />
+
+</RelativeLayout>
