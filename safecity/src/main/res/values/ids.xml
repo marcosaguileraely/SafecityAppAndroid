@@ -4,4 +4,23 @@
     <item name="comment" type="id">comment</item>
     <item name="reportButton" type="id">reportButton</item>
     <item name="home_messages_wall" type="id">home_messages_wall</item>
+    <item name="ya_tienes_cuenta_button" type="id">ya_tienes_cuenta_button</item>
+    <item name="no_tienes_cuenta_boton" type="id">no_tienes_cuenta_boton</item>
+    <item name="seguridad_nombres" type="id">seguridad_nombres</item>
+    <item name="seguridad_correo" type="id">seguridad_correo</item>
+    <item name="seguridad_movil" type="id">seguridad_movil</item>
+    <item name="seguridad_ya_tienes_cuenta_button" type="id">seguridad_ya_tienes_cuenta_button
+    </item>
+    <item name="seguridad_no_tienes_cuenta_boton" type="id">seguridad_no_tienes_cuenta_boton</item>
+    <item name="security_message" type="id">security_message</item>
+    <item name="seguridad_message" type="id">seguridad_message</item>
+    <item name="etiqueta_usuario" type="id">etiqueta_usuario</item>
+    <item name="etiqueta_clave" type="id">etiqueta_clave</item>
+    <item name="etiqueta_email" type="id">etiqueta_email</item>
+    <item name="signupParse" type="id">signupParse</item>
+    <item name="signupToParse" type="id">signupToParse</item>
+    <item name="etiqueta_movil" type="id">etiqueta_movil</item>
+    <item name="etiqueta_edad" type="id">etiqueta_edad</item>
+    <item name="seguridad_nomovil" type="id">seguridad_nomovil</item>
+    <item name="seguridad_edad" type="id">seguridad_edad</item>
 </resources>

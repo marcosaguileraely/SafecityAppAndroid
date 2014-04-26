@@ -32,9 +32,10 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:textColor="#ffffffff"
-        android:background="@android:drawable/ic_menu_myplaces"
         android:singleLine="false"
-        android:layout_alignParentStart="false" />
+        android:layout_alignParentStart="false"
+        android:clickable="true"
+        android:background="@drawable/ic_menu_myplaces_home" />
 
     <Button
         android:layout_width="60dp"
@@ -43,7 +44,7 @@
         android:layout_below="@id/reportButton"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="@android:drawable/ic_menu_view"
+        android:background="@drawable/ic_menu_view_home"
         android:clickable="true" />
 
 </RelativeLayout>

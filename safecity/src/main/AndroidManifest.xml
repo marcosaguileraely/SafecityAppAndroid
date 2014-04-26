@@ -9,8 +9,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.cool4code.safecity.safecity.HomeActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_home" >
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,9 +26,16 @@
             android:value="AIzaSyCl67lBb8R74AV7-RjdUoTPShZklXfAXD4" />
 
         <activity
-            android:name="com.cool4code.safecity.safecity.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
+            android:name="com.cool4code.safecity.safecity.SignUpActivity"
+            android:label="@string/title_activity_sign_up" >
+        </activity>
+        <activity
+            android:name="com.cool4code.safecity.safecity.introActivity"
+            android:label="@string/title_activity_intro" >
+        </activity>
+        <activity
+            android:name="com.cool4code.safecity.safecity.SettingsActivity"
+            android:label="@string/title_activity_settings" >
         </activity>
     </application>
 
